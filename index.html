@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="Explore a synthetic market-surveillance example: chart, signals and the data behind each calculation.">
+ <title>Trade Monitor · Synthetic Sample</title>
+ <link rel="stylesheet" href="style.css"><script defer src="model.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+ <header class="topbar"><a class="brand" href="#main"><span class="brand-mark" aria-hidden="true">T<span></span></span>Trade Monitor <small>Sample</small></a><div class="top-actions"><span class="demo-badge" data-i18n="synthetic">SYNTHETIC DEMO</span><button id="language" aria-label="Switch language">RU</button><a href="https://github.com/Niphridium/trade-monitor-public-sample" target="_blank" rel="noopener noreferrer" data-i18n="code">View code ↗</a></div></header>
+ <main id="main">
+  <div class="intro"><div><div class="eyebrow" data-i18n="eyebrow">A PERSONAL SURVEILLANCE EXPERIMENT</div><h1 data-i18n="title">Follow the signal. Check the data.</h1><p data-i18n="intro">Select an event to see the minute, the calculation and the source values together.</p></div><div class="source-label"><span class="status-dot"></span><span data-i18n="generated">Generated data · no live feed</span><small>15 Jan 2026 · UTC</small></div></div>
+  <section class="disclosure" aria-label="Data disclosure"><span class="disclosure-icon" aria-hidden="true">i</span><p data-i18n="disclosure">Every price and volume on this page is invented. This sample shows a review workflow; it does not identify traders or prove market abuse.</p></section>
+  <div class="workspace">
+   <section class="market panel" aria-labelledby="chartTitle">
+    <div class="panel-header"><div><span class="eyebrow" data-i18n="market">MARKET CONTEXT</span><h2 id="chartTitle">DEMO <span>/ USDT</span></h2></div><div class="interval">1m <span data-i18n="candles">candles</span></div></div>
+    <div class="chart-key"><span><i class="key-candle"></i><span data-i18n="price">Price</span></span><span><i class="key-volume"></i><span data-i18n="volume">Quote volume</span></span><span><i class="key-event"></i><span data-i18n="eventMarkers">Review events</span></span></div>
+    <div id="chart" class="chart" aria-label="Synthetic price and volume chart"></div>
+    <p class="chart-tip" data-i18n="chartTip">Gold markers link the chart to the event list below. The highlighted minute is the one you are reviewing.</p>
+    <div class="events-head"><h3 data-i18n="events">Events to review</h3><span id="eventCount"></span></div>
+    <div id="events" class="event-list"></div>
+    <p id="empty" class="empty" hidden data-i18n="empty">No events at these thresholds. Lower a threshold or reset the sample.</p>
+   </section>
+   <aside class="inspector panel" aria-labelledby="evidenceTitle">
+    <div class="panel-header"><div><span class="eyebrow" data-i18n="evidence">EVIDENCE</span><h2 id="evidenceTitle" data-i18n="why">Why this minute?</h2></div><span class="number-tag" id="eventNumber">01</span></div>
+    <div id="inspection"></div>
+    <a class="primary" id="download" download="synthetic-event-36.json" data-i18n="download">Download synthetic evidence ↓</a>
+    <p class="export-note" data-i18n="exportNote">JSON includes this minute, its previous 20 minutes and the rule calculations.</p>
+   </aside>
+  </div>
+  <section class="controls panel"><details><summary><span data-i18n="tryThresholds">Try different thresholds</span><span class="muted" data-i18n="localOnly">Changes apply to this sample only</span></summary><div class="control-grid"><label><span data-i18n="volumeThreshold">R04 · Volume multiple</span><strong id="volumeValue">5×</strong><input id="volumeThreshold" type="range" min="2" max="15" step="1" value="5"></label><label><span data-i18n="sideThreshold">R05 · Dominant side</span><strong id="sideValue">80%</strong><input id="sideThreshold" type="range" min="60" max="100" step="5" value="80"></label><button id="reset" data-i18n="reset">Reset sample</button></div><p data-i18n="thresholdNote">Changing a threshold changes the number of alerts. It does not tell us whether those alerts are useful or accurate.</p></details></section>
+  <footer><span data-i18n="footer">Independent personal project · two illustrative rules · no account data</span><a href="https://github.com/Niphridium/trade-monitor-public-sample/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer" data-i18n="privacy">Data & privacy ↗</a></footer>
+ </main>
+ <noscript>This interactive synthetic sample needs JavaScript. All data is generated in your browser.</noscript>
+</body></html>
