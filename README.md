@@ -4,6 +4,8 @@ A small, interactive example of a market-surveillance review: select an event, i
 
 **Every price and volume is synthetic.** `DEMO/USDT` is a fictitious market. This repository contains an independent demonstration, not the full local application or its database.
 
+[Open the interactive sample](https://niphridium.github.io/trade-monitor-public-sample/)
+
 ## Try it
 
 Open `index.html` in a browser. No installation, account, API key or exchange connection is required. English and Russian are available. JSON evidence download was checked in Chrome on macOS; other browser versions have not been exhaustively tested.
@@ -32,3 +34,5 @@ node --test tests/*.cjs
 No employer, customer, account or actual exchange data is included. The page has no application backend, telemetry, external scripts, fonts or automatic market requests. It generates data in the browser. Opening the public website still sends normal web requests to its hosting provider. See [PRIVACY.md](PRIVACY.md).
 
 Independent personal project. MIT licensed.
+
+![Synthetic sample interface](assets/preview.jpg)
